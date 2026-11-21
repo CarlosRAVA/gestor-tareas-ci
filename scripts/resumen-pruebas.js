@@ -17,8 +17,7 @@ const cobertura = c ? `${c.total.lines.pct}%` : 'n/d';
 console.log('## Resumen de pruebas\n');
 console.log('| Total | Pasaron | Fallaron | Cobertura de líneas |');
 console.log('|---|---|---|---|');
-console.log(`| ${r.numTotalTests} | ${r.numPassedTests} | ${r.numFailedTests} |
-${cobertura} |`);
+console.log(`| ${r.numTotalTests} | ${r.numPassedTests} | ${r.numFailedTests} | ${cobertura} |`);
 const fallidas = r.testResults
     .flatMap((f) => f.assertionResults)
     .filter((t) => t.status === 'failed');
